@@ -13,8 +13,13 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-#echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
+echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+echo 'src-git openclash https://github.com/vernesong/OpenClash.git' >>feeds.conf.default
+rm -rf package/lean/luci-theme-argon
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+mv package/lean/OpenClash/luci-app-openclash package/lean/luci-app-openclash
+rm -rf package/lean/OpenClash
 
-# Lienol/openwrt-package
-#sed -i '$a src-git lienol https://github.com/Lancenas/lienol-openwrt-package.git' feeds.conf.default
+
+
+
