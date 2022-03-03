@@ -19,6 +19,8 @@ rm -rf package/lean/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 mv package/lean/OpenClash/luci-app-openclash package/lean/luci-app-openclash
 rm -rf package/lean/OpenClash
+git clone https://github.com/jerrykuku/lua-maxminddb.git  package/lean/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git  package/lean/luci-app-vssr
 
 
 
