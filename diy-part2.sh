@@ -11,6 +11,7 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
+rm -rf golang && svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang
 # curl -sL -m 30 --retry 2 https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-mipsle-softfloat.tar.gz -o /tmp/clash.tar.gz
 # tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
 # chmod +x /tmp/clash >/dev/null 2>&1
